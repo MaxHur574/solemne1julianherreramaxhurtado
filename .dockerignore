@@ -1,0 +1,27 @@
+# Ignorar entorno virtual
+.venv/
+venv/
+
+# Ignorar archivos de Python compilados
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorar archivos de pruebas y cobertura
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Ignorar configuraciones locales
+.env
+*.log
+
+# Ignorar archivos de control de Git
+.git
+.gitignore
+
+# Ignorar archivos temporales
+*.swp
+*.tmp
+*.bak
