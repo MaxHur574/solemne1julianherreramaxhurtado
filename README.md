@@ -111,8 +111,15 @@ Respuesta esperada (ejemplo):
 
 ```
 .
-├── main.py          # Aplicación FastAPI principal
-├── Dockerfile       # Configuración del contenedor Docker
-└── README.md        # Este archivo
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+├── main.py
+├── test_main.py
+├── Dockerfile
+├── .dockerignore
+├── .gitignore
+├── pyproject.toml
+└── README.md
 ```
 
