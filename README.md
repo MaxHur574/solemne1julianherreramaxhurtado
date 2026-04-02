@@ -26,3 +26,93 @@ Este proyecto expone un endpoint en **FastAPI** que devuelve la hora oficial de 
    ```powershell
    python -m venv .venv
    .\.venv\Scripts\activate.bat
+   ```
+
+3. Instalar las dependencias:
+
+   ```powershell
+   pip install fastapi uvicorn ntplib tzdata pytest
+   ```
+
+---
+
+## ▶️ Ejecutar la aplicación localmente
+
+Con el entorno virtual activado, ejecuta el siguiente comando desde la raíz del proyecto:
+
+```bash
+uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+```
+
+La aplicación estará disponible en: `http://localhost:8000`
+
+> La flag `--reload` recarga automáticamente el servidor al detectar cambios en el código. Se recomienda solo en desarrollo.
+
+---
+
+## 🐳 Ejecutar con Docker
+
+### 1. Construir la imagen
+
+```bash
+docker build -t fastapi-hora-chile .
+```
+
+### 2. Ejecutar el contenedor
+
+```bash
+docker run -d -p 8000:8000 fastapi-hora-chile
+```
+
+La aplicación estará disponible en: `http://localhost:8000`
+
+### Detener el contenedor
+
+```bash
+docker ps                        # obtener el CONTAINER ID
+docker stop <CONTAINER_ID>
+```
+
+---
+
+## 🧪 Testear el API
+
+### Con el navegador
+
+Abre tu navegador y visita:
+
+```
+http://localhost:8000/time
+```
+
+También puedes acceder a la documentación interactiva automática de FastAPI:
+
+```
+http://localhost:8000/docs
+```
+
+### Con curl
+
+```bash
+curl http://localhost:8000/time
+```
+
+Respuesta esperada (ejemplo):
+
+```json
+{
+  "hora_chile": "2025-04-02T15:30:00-04:00"
+}
+```
+
+---
+
+## 🧾 Estructura del proyecto
+
+```
+.
+├── main.py          # Aplicación FastAPI principal
+├── Dockerfile       # Configuración del contenedor Docker
+└── README.md        # Este archivo
+```
+
