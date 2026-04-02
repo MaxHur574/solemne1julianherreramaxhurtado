@@ -30,8 +30,8 @@ Este proyecto expone un endpoint en **FastAPI** que devuelve la hora oficial de 
 
 3. Instalar las dependencias:
 
-   ```powershell
-   pip install fastapi uvicorn ntplib tzdata pytest
+   ```
+   uv sync
    ```
 
 ---
@@ -44,7 +44,7 @@ Con el entorno virtual activado, ejecuta el siguiente comando desde la raíz del
 uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
-La aplicación estará disponible en: `http://localhost:8000`
+La aplicación estará disponible en: `http://localhost:8000/time`
 
 > La flag `--reload` recarga automáticamente el servidor al detectar cambios en el código. Se recomienda solo en desarrollo.
 
@@ -64,7 +64,7 @@ docker build -t fastapi-hora-chile .
 docker run -d -p 8000:8000 fastapi-hora-chile
 ```
 
-La aplicación estará disponible en: `http://localhost:8000`
+La aplicación estará disponible en: `http://localhost:8000/time`
 
 ### Detener el contenedor
 
