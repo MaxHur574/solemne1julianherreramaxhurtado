@@ -22,8 +22,9 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install fastapi uvicorn pytest ntplib tzdata
+        pip install fastapi uvicorn pytest ntplib tzdata httpx
 
     - name: Run tests
       run: |
         pytest -v
+
