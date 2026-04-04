@@ -3,7 +3,7 @@ name = "fastapi-chile-time"
 version = "0.1.0"
 description = "API en FastAPI que entrega hora UTC y hora oficial de Chile usando NTP."
 authors = [
-    { name = "Maximiliano", email = "tuemail@example.com" }
+    { name = "Maximiliano", email = "mhurtadop@correo.uss.cl" }
 ]
 readme = "README.md"
 requires-python = ">=3.13"
