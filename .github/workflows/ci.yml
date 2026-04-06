@@ -22,7 +22,7 @@ jobs:
     - name: Install dependencies
       run: |
         pip install uv
-        uv sync --extra dev
+        uv sync
 
     - name: Lint code
       run: uv run ruff check main.py
